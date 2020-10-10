@@ -4,96 +4,79 @@
     https://coolors.co/331832-694d75-1b5299-9fc2cc-f1ecce
 */
 
-.btn{
-    background-color: #F1ECCE;
-    color: #331832;
+.host-list{
+  text-align: right;
 }
+.btn {
+  background-color: #F1ECCE;
+  color: #331832;
+  margin-bottom: 2%;
+}
+
 .btn:hover {
-    background-color: #9FC2CC;
-    color: #F1ECCE;
-    
+  background-color: #9FC2CC;
+  color: #F1ECCE;
+
+}
+
+.back-btn,
+.back-btn:hover {
+  color: #F1ECCE;
+}
+
+body,
+html,
+.invalid-feedback {
+  height: 100%;
+  color: #F1ECCE;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.invalid-feedback .form-check-label {
+  color: #9FC2CC;
+}
+
+.form-check-input.is-valid~.form-check-label,
+.was-validated .form-check-input:valid~.form-check-label {
+  color: #9FC2CC;
+}
+
+.container {
+  margin-top: 10px;
+}
+
+body {
+  padding: 40px;
+  background-color: #1B5299;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul li {
+  padding: 12px 40px 12px 8px;
+  background: #eee;
+  color: #331832;
+  font-size: 18px;
+  transition: 0.2s;
+  box-shadow: 0px 10px 15px #666;
+  /* 
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; */
+}
+
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+ul li:hover {
+  background: #dddddd ;
 }
 
 
-li{
-    color: #331832;
-}
-body, html, .invalid-feedback{
-    height:100%;
-    color: #F1ECCE;
-    font-family: 'Tajawal', sans-serif;
-}
-.invalid-feedback .form-check-label{
-    color: #9FC2CC;
-}
-
-.form-check-input.is-valid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label {
-    color: #9FC2CC;
-}
-
-/* p{
-     font-family: 'VT323', monospace;
-     font-size: larger;
- } */
-
-
- .container{
-    margin-top: 10px;
- }
-
-body { 
-    padding: 40px;
-    background-color: #1B5299;
-}
-  
-  ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-  
-  ul li{
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 40px;
-    background: #eee;
-    font-size: 18px;
-    transition: 0.2s;
-    box-shadow: 0px 10px 15px #666;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  /*Make all odd list items different color  */
-  ul li:nth-child(odd){
-    background: #f9f9f9;
-  }
-  
-  /*Darken on hover  */
-  ul li:hover{
-    background: #ddd;
-  }
-  
-  /*When clicked on, add background color and strike out  */
-  ul li.checked{
-    background: #ACBB72;
-    color: #fff;
-    text-decoration: line-through;
-    border: 0.5px solid black;
-  }
-  
-  ul li.checked::before {
-    content: '';
-    position: absolute;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
-  }
-  
