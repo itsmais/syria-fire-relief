@@ -22,7 +22,7 @@ var requestOptions = {
     credentials: 'omit'
   };
   
-  fetch("https://mik22.pythonanywhere.com/", requestOptions)
+  fetch("https://syria-crisisresponse.firebaseio.com/users.json", requestOptions)
     .then(response => response.text())
     .then(result => {
         // console.log(result);
