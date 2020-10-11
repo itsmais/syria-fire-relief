@@ -1,3 +1,42 @@
+let SyrianCities =[
+    "حلب",
+    "دمشق",
+    "ريف دمشق",
+    "حمص",
+    "اللاذقية",
+    "حماة",
+    "طرطوس",
+    "الرقة",
+    "دير الزور",
+    "السويداء",
+    "الحسكة",
+    "درعا",
+    "إدلب",
+    "القنيطرة"
+]
+
+let hostsList = document.getElementById("hosts");
+var requestOptions = {
+    method: 'GET',
+    redirect: 'follow',
+    credentials: 'omit'
+  };
+  
+  fetch("https://mik22.pythonanywhere.com/", requestOptions)
+    .then(response => response.text())
+    .then(result => {
+        // console.log(result);
+        let parsedResult = JSON.parse(result);
+        let hostLine ="";
+        for (i in parsedResult){
+            hostLine+=parsedResult[i]["firstName"] + " " + parsedResult[i]["lastName"] + " - " + parsedResult[i]["phoneNumber"] + " - " + parsedResult[i]["address"] + " - " + SyrianCities[parsedResult[i]["city"]] + " - " + parsedResult[i]["guests"] + " أشخاص";  
+            hostsList.innerHTML += "<li dir=\"rtl\">" + hostLine + "</i>";
+            hostLine="";
+        }
+    })
+    .catch(error => console.log('error', error));
+
+
 (function() {
     'use strict';
     window.addEventListener('load', function() {
